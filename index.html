@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ball"></div>
+        <div id="points-container"></div>
+    </div>
+
+    <header>
+        <span id="menu-icon"></span>
+        <span id="shop-button" class="button">Shop</span>
+        <span id="help-button" class="button">Help</span>
+        <span id="settings-button" class="button">Settings</span>
+    </header>
+
+    <div id="score">Score: 0</div>
+    <div id="pause-resume-button">Pause</div>
+
+    <div id="shop-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Shop</h2>
+            <div class="upgrade">
+                <p>Speed Upgrade</p>
+                <button id="buy-speed-upgrade-button">Buy</button>
+                <span>Cost: <span id="speed-upgrade-cost">10</span> points</span>
+            </div>
+            <div class="upgrade">
+                <p>Points Upgrade</p>
+                <button id="buy-points-upgrade-button">Buy</button>
+                <span>Cost: <span id="points-upgrade-cost">100</span> points</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Help</h2>
+            <p>Use the joystick or arrow keys/WASD to move the ball. Collect the green points to increase your score. Use the points to buy upgrades from the shop. You can also change the background gradient color in the settings.</p>
+        </div>
+    </div>
+
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Settings</h2>
+            <div>
+                <label for="bg-gradient-start">Background Gradient Start:</label>
+                <input type="color" id="bg-gradient-start" name="bg-gradient-start">
+            </div>
+            <div>
+                <label for="bg-gradient-end">Background Gradient End:</label>
+                <input type="color" id="bg-gradient-end" name="bg-gradient-end">
+            </div>
+            <div>
+                <label for="border-color-input">Border Color:</label>
+                <input type="color" id="border-color-input" name="border-color-input">
+            </div>
+            <div>
+                <label for="border-width-input">Border Width:</label>
+                <input type="number" id="border-width-input" name="border-width-input" min="1" max="10" value="2">
+            </div>
+            <button id="apply-button">Apply</button>
+        </div>
+    </div>
+
+    <!-- Joystick Container -->
+    <div id="joystick-container">
+        <div id="joystick-base"></div>
+        <div id="joystick-handle"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
